@@ -24,21 +24,21 @@ int main()
     };
 
 
-    auto data = std::make_shared<const InputData>( //створення вхідних таних
+    auto data = std::make_shared<const InputData>( //створення вхідних даних
         InputData{points, 2.0});
 
 
-    auto resultA = calculateB(data);
+    auto resultB = calculateB(data);
 
   
-    auto [derivativeA, errorA] = *resultA;
+    auto [derivativeB, errorB] = *resultB;
 
     std::cout << "Точка x0=" << data->x0 << "\n";
     std::cout << "Наближене значення похідної:"
-              << derivativeA << "\n";
+              << derivativeB << "\n";
 
     std::cout << "Оцінка похибки:"
-              << errorA << "\n";
+              << errorB << "\n";
 
     return 0;
 }
