@@ -9,10 +9,10 @@ std::unique_ptr<Result> calculateA(
 
     for (std::size_t i = 0; i < data->points.size(); ++i) //шукаємо точку x0 у таблиці
     {
-        if (std::abs(data->points[i].x - data->x0) < 1e-9)
+        if (std::abs(data->points[i].x-data->x0)<1e-9)
         {
 
-            if (i > 0 || i + 1 < data->points.size()) // чи є сусідні точки
+            if (i>0 && i+1 < data->points.size()) // чи є сусідні точки
             {
                 double x1=data->points[i-1].x;
                 double y1=data->points[i-1].y;
@@ -25,8 +25,8 @@ std::unique_ptr<Result> calculateA(
 
                 // Оцінку похибки зробимо порівнянням
                 // з правою однобічною різницею
-                double x_right=data->points[i + 1].x;
-                double y_right=data->points[i + 1].y;
+                double x_right=data->points[i+1].x;
+                double y_right=data->points[i+1].y;
                 double x_mid=data->points[i].x;
                 double y_mid=data->points[i].y;
 
