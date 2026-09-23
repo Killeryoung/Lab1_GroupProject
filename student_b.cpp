@@ -21,7 +21,7 @@ std::unique_ptr<Result> calculateA(
                 double y2=data->points[i+1].y;
 
                 
-                double derivative=(y2-y1)/(x2-x1) // Формула центральної різниці
+                double derivative=(y2-y1)/(x2-x1); // Формула центральної різниці
 
                 // Оцінку похибки зробимо порівнянням
                 // з правою однобічною різницею
